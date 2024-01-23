@@ -49,15 +49,15 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	<nav class="site-nav">
+	<nav class="site-nav" style="background-color: #6998ab;">
 		<div class="container">
 			<div class="site-navigation">
 				<a href="<?= base_url('Home/dashboard')?>" class="logo m-0" style="text-decoration: none;">E-Gallery <span class="text-primary">.</span></a>
 
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
 <?php  if(session()->get('id')>0) { ?>
-					<li class="active"><a href="<?= base_url('Home/dashboard')?>"><b>Home</b></a></li>
-					<li><a href="<?= base_url('My_Gallery')?>"><b>My Gallery</b></a></li>
+					<li><a href="<?= base_url('Home/dashboard')?>"><b>Home</b></a></li>
+					<li class="active"><a href="<?= base_url('My_Gallery')?>"><b>My Gallery</b></a></li>
 					<li><a href="<?= base_url('LogOut')?>"><b>Log-Out</b></a></li>
 <?php }else{} ?>
 				</ul>
@@ -70,131 +70,58 @@
 		</div>
 	</nav>
 
-
-	<div class="hero">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-7">
-					<div class="intro-wrap">
-						<h1 class="mb-5"><span class="d-block">Let's Enjoy Your</span> E-Gallery, <span class="typed-words"></span></h1>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<div class="slides">
-						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid active">
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-						<img src="images/hero-slider-5.jpg" alt="Image" class="img-fluid">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="untree_co-section">
-		<div class="container">
-			<div class="row text-center justify-content-center mb-5">
-				<div class="col-lg-7"><h2 class="section-title text-center">Popular Image</h2></div>
-			</div>
+		<div class="container"><br>
+		<h2 class="section-MyGallery text-center" data-aos="fade" data-aos-delay="50">My Images</h2>
+		<style>
+		  .section-MyGallery:before {
+		    content: "";
+		    position: absolute;
+		    left: 50%; 
+		    bottom: 0;
+		    width: 30px;
+		    height: 2px;
+		    background: #1A374D;
+		    transform: translateX(-50%);
+		  }
+		</style>
+		<br>
+		<a href="<?= base_url('My_Gallery')?>"><button class="btn btn-success custom-button float-right mr-2" style="cursor: pointer;" data-toggle="modal" data-target="#upload_image">
+		  <i class="fa-solid fa-left-long"></i> Back To Gallery
+		</button></a>
 
-			<div class="owl-carousel owl-3-slider">
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-1.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Pragser Wildsee</h3>
-							<span class="location">Italy</span>
-						</div>
-						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-2.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Oia</h3>
-							<span class="location">Greece</span>
-						</div>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-3.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Perhentian Islands</h3>
-							<span class="location">Malaysia</span>
-						</div>
-						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-4.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Rialto Bridge</h3>
-							<span class="location">Italy</span>
-						</div>
-						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-5.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>San Francisco, United States</h3>
-							<span class="location">United States</span>
-						</div>
-						<img src="images/hero-slider-5.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-				<div class="item">
-					<a class="media-thumb" href="images/hero-slider-1.jpg" data-fancybox="gallery">
-						<div class="media-text">
-							<h3>Lake Thun</h3>
-							<span class="location">Switzerland</span>
-						</div>
-						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
-					</a> 
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<div class="untree_co-section">
-		<div class="container">
 			<div class="row justify-content-center text-center mb-5">
-				<div class="col-lg-6">
-					<h2 class="section-title text-center mb-3" data-aos="fade" data-aos-delay="50">All Images</h2>
-					<p data-aos="fade" data-aos-delay="100">E-Gallery is an application that allows users to upload images with their community. By facilitating users to share photos, E-Gallery creates a platform rich in creativity and visual experiences from various points of view.</p>
-				</div>
-			</div>
-			<div class="row">
+			</div><br>
 
-				<?php foreach ($data as $gallery): ?>   
-				    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-				        <div class="media-1">
-				            <a class="d-block mb-3"><img class="img-gallery" src="<?= base_url('gallery/' . $gallery->gallery) ?>" alt="Image"></a>
-				            <span class="d-flex align-items-center loc mb-2">
-				                <span class="icon-room mr-3"></span>
-				                <span class="text-capitalize"><?php echo $gallery->kategori ?></span>
-				            </span>
-				            <div class="d-flex align-items-center">
-				                <div>
-				                    <h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
-				                    <div class="price ml-auto">
-				                        <a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-				                        <i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1"></i>
-				                    </div>
-				                </div>
-				            </div>
-				        </div>
-				    </div>
+			<div class="row">
+				
+      	<?php foreach ($data as $gallery): ?>	
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+			    <div class="media-1 position-relative">
+			    	<div class="dropdown position-absolute top-0 end-0">
+		            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                <i class="fa-solid fa-compact-disc"></i>
+		            </button>
+		            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		                <a class="dropdown-item" href="<?= base_url('/My_Gallery/delete_gallery/'.$gallery->id_gallery)?>">Delete</a>
+		            </div>
+		        </div>
+            <a class="d-block mb-3"><img class="img-gallery" src="<?= base_url('gallery/' . $gallery->gallery) ?>" alt="Image"></a>
+						<span class="d-flex align-items-center loc mb-2">
+							<span class="icon-room mr-3"></span>
+							<span class="text-capitalize"><?php echo $gallery->kategori ?></span>
+						</span>
+						<div class="d-flex align-items-center">
+							<div>
+								<h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
+								<div class="price ml-auto">
+									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
+									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<?php endforeach; ?>
 				<div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-lg" role="document">
@@ -275,7 +202,6 @@
 				  }
 				}
 				</script>
-
 			</div><br>
 
 			<style>

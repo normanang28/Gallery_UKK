@@ -1,0 +1,283 @@
+CRITICAL - 2024-01-23 00:23:01 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\Gallery_UKK\app\Views\layout\my_gallery.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/my_galle...', Array, true)
+#4 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(11): view('layout/my_galle...')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#7 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-23 00:25:21 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\Gallery_UKK\app\Views\layout\my_gallery.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/my_galle...', Array, true)
+#4 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(11): view('layout/my_galle...')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#7 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-23 02:41:45 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\Gallery_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('My_Gallery')
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('My_Gallery')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 02:42:00 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\Gallery_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('My_Gallery')
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('My_Gallery')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 05:14:15 --> Invalid file: login.php
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+#1 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(21): view('login')
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 05:14:16 --> Invalid file: login.php
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+#1 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('login', Array, true)
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(21): view('login')
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 05:29:09 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/my_galle...', Array, true)
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(20): view('layout/my_galle...', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 05:29:45 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\Gallery_UKK\app\Views\layout\my_gallery.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 142, Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/my_galle...', Array, true)
+#4 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(20): view('layout/my_galle...', Array)
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#7 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-01-23 05:46:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2024-01-23 05:46:29 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(14): App\Models\M_model->tampilWhere('album', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 05:48:22 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2024-01-23 05:48:22 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(14): App\Models\M_model->tampilWhere('album', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 05:54:48 --> Unknown column 'id_user' in 'where clause'
+CRITICAL - 2024-01-23 05:54:48 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(13): App\Models\M_model->tampilWhere('album', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->index()
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 06:00:06 --> Column 'id_album_gallery' cannot be null
+CRITICAL - 2024-01-23 06:10:34 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\Gallery_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('My_Gallery')
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('My_Gallery')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 06:10:46 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\Gallery_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('My_Gallery')
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('My_Gallery')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 06:11:43 --> Too few arguments to function App\Controllers\My_Gallery::our_gallery(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-23 06:12:59 --> Unknown column 'album.album' in 'on clause'
+CRITICAL - 2024-01-23 06:12:59 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(80): App\Models\M_model->our_gallery('gallery', 'album', 'gallery.id_albu...', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 06:14:03 --> Unknown column 'album.album' in 'on clause'
+CRITICAL - 2024-01-23 06:14:03 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(80): App\Models\M_model->our_gallery('gallery', 'album', 'gallery.id_albu...', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 06:14:14 --> Unknown column 'album.album' in 'on clause'
+CRITICAL - 2024-01-23 06:14:14 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(80): App\Models\M_model->our_gallery('gallery', 'album', 'gallery.id_albu...', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 06:23:37 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\Gallery_UKK\app\Views\layout\our_gallery.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 79, Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#4 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#7 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-23 06:33:47 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:34:47 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:34:48 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:35:30 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:36:43 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:37:29 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:38:18 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\Gallery_UKK\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\Gallery_UKK\system\Common.php(1089): CodeIgniter\View\View->render('layout/our_gall...', Array, true)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(90): view('layout/our_gall...', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('2')
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 06:42:45 --> Too few arguments to function App\Models\M_model::our_gallery(), 2 passed in C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php on line 81 and exactly 4 expected
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(81): App\Models\M_model->our_gallery('gallery', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-23 06:42:48 --> Too few arguments to function App\Models\M_model::our_gallery(), 2 passed in C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php on line 81 and exactly 4 expected
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(81): App\Models\M_model->our_gallery('gallery', Array)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('6')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 07:07:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2024-01-23 07:07:15 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(83): App\Models\M_model->tampilWhere('album', NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 07:07:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2024-01-23 07:07:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(83): App\Models\M_model->tampilWhere('album', NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->our_gallery('5')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

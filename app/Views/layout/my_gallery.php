@@ -49,15 +49,17 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	<nav class="site-nav">
+	<nav class="site-nav" style="background-color: #6998ab;">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="<?= base_url('')?>" class="logo m-0 text-info" style="text-decoration: none;">E-Gallery <span class="text-primary">.</span></a>
+				<a href="<?= base_url('Home/dashboard')?>" class="logo m-0" style="text-decoration: none;">E-Gallery <span class="text-primary">.</span></a>
 
 				<ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
-					<li class="active"><a href="<?= base_url('')?>">Home</a></li>
-					<li><a href="<?= base_url('Gallery')?>">My Gallery</a></li>
-					<li><a href="<?= base_url('LogOut')?>">Log-Out</a></li>
+<?php  if(session()->get('id')>0) { ?>
+					<li><a href="<?= base_url('Home/dashboard')?>"><b>Home</b></a></li>
+					<li class="active"><a href="<?= base_url('My_Gallery')?>"><b>My Gallery</b></a></li>
+					<li><a href="<?= base_url('LogOut')?>"><b>Log-Out</b></a></li>
+<?php }else{} ?>
 				</ul>
 
 				<a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
@@ -70,402 +72,169 @@
 
 	<div class="untree_co-section">
 		<div class="container"><br>
-			<div style="text-align: right;">
-				<a href="<?= base_url('/My_Gallery/upload/')?>">
-					<button class="btn btn-success"><i class="fa-solid fa-upload"></i> Upload</button>
-				</a>
-			</div>
+		<h2 class="section-MyGallery text-center" data-aos="fade" data-aos-delay="50">My Gallery</h2>
+		<style>
+		  .section-MyGallery:before {
+		    content: "";
+		    position: absolute;
+		    left: 50%; /* Center the line relative to the container */
+		    bottom: 0;
+		    width: 30px;
+		    height: 2px;
+		    background: #1A374D;
+		    transform: translateX(-50%); /* Adjust to center the line properly */
+		  }
+		</style>
+		<br>
+		<!-- Add Images Modal -->
+		<button class="btn btn-success custom-button float-right mr-2" style="cursor: pointer;" data-toggle="modal" data-target="#upload_image">
+		  <i id="commentIcon" class="fa-solid fa-camera"></i> Add Images
+		</button>
+
+		<div class="modal fade" id="upload_image" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="commentModalLabel">Are you sure want to add image?</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <form id="imageForm" class="form-horizontal form-label-left" novalidate enctype="multipart/form-data" action="<?= base_url('My_Gallery/image')?>" method="post">
+
+		          <div class="row">
+		            <div class="mb-3 col-md-6">
+								    <label class="control-label col-12">Upload Images<span style="color: red;"> :</span></label>
+								    <div class="input-group">
+								        <div class="custom-file">
+								            <input type="file" class="custom-file-input" id="gallery" name="gallery" accept="image/*" onchange="displayFileName()">
+								            <label class="custom-file-label" for="gallery" id="fileLabel">Choose file</label>
+								        </div>
+								        <div class="input-group-append">
+								            <span class="input-group-text" id="inputGroupFileAddon"><i class="fa-solid fa-upload"></i></span>
+								        </div>
+								    </div>
+								    <small class="form-text text-muted">Select an image with a maximum size of 748 x 1023 pixels.</small>
+								</div>
+
+								<script>
+								function displayFileName() {
+								    var input = document.getElementById('gallery');
+								    var label = document.getElementById('fileLabel');
+								    
+								    label.textContent = input.files[0].name;
+								}
+								</script>
+		            <script>
+		              function validateImage() {
+		                var fileInput = document.getElementById('gallery');
+		                var files = fileInput.files;
+
+		                if (files.length > 0) {
+		                  var img = new Image();
+		                  img.src = window.URL.createObjectURL(files[0]);
+
+		                  img.onload = function() {
+		                    var maxWidth = 748;
+		                    var maxHeight = 1023;
+
+		                    if (img.width > maxWidth || img.height > maxHeight) {
+		                      alert('Maximum image dimensions allowed: 748 x 1023');
+		                      fileInput.value = ''; // Clear the file input
+		                    }
+		                  };
+		                }
+		              }
+		            </script>
+		            <div class="mb-3 col-md-6">
+		              <label class="form-label">Category Images<span style="color: black;"> :</span></label>
+		              <input type="text" id="kategori" name="kategori" class="form-control text-capitalize col-12" placeholder="Category Images" maxlength="15">
+		            </div>
+		            <div class="mb-3 col-md-6">
+		              <label class="form-label">Images Name<span style="color: black;"> :</span></label>
+		              <input type="text" id="nama_gallery" name="nama_gallery" class="form-control text-capitalize col-12" placeholder="Images Name" maxlength="15">
+		            </div>
+		            <div class="mb-3 col-md-6">
+		              <label class="form-label">Chose Your Album<span style="color: black;"> :</span></label>
+									<select name="id_album" class="form-control text-capitalize" id="id_album" required>
+									    <option>Choose Your Album</option>
+									    <?php foreach ($data as $album) {?>
+									        <option class="text-capitalize" value="<?php echo $album->id_album ?>"><?php echo $album->nama_album ?></option>
+									    <?php } ?>
+									</select>
+		            </div>
+		          </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="submit" id="submitButtonImages" class="btn btn-success">Yes, Add the Images</button>
+		      </div>
+		      </form>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Add Album Modal -->
+		<button class="btn btn-success custom-button float-right mr-2" style="cursor: pointer;" data-toggle="modal" data-target="#upload_album">
+		  <i id="commentIcon" class="fa-solid fa-images"></i> Add Album
+		</button>
+
+		<div class="modal fade" id="upload_album" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-md" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="commentModalLabel">Are you sure want to add album?</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <form id="albumForm" class="form-horizontal form-label-left" novalidate enctype="multipart/form-data" action="<?= base_url('My_Gallery/album')?>" method="post">
+
+		          <div class="row">
+		            <div class="mb-6 col-md-12">
+		              <label class="form-label">Album Name<span style="color: black;"> :</span></label>
+		              <input type="text" id="nama_album" name="nama_album" class="form-control text-capitalize" placeholder="Album Name" maxlength="15">
+		            </div>
+		          </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="submit" id="submitButtonAlbum" class="btn btn-success">Yes, Add the album</button>
+		      </div>
+		      </form>
+		    </div>
+		  </div>
+		</div>
 
 			<div class="row justify-content-center text-center mb-5">
-				<div class="col-lg-6">
-					<h2 class="section-title text-center mb-3" data-aos="fade" data-aos-delay="50">My Images</h2>
-				</div>
-			</div>
-			<div class="row">
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Rialto Mountains</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- <div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div> -->
-				<div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body chat-modal-body text-capitalize" id="chatModalBody">
-
-				      </div>
-				      <div class="modal-footer">
-						  <div class="input-group">
-						    <input type="text" id="chatInput" class="form-control text-capitalize" placeholder="Type your message...">
-						    <div class="input-group-append">
-						      <button type="button" class="btn btn-success" onclick="sendMessage()">
-						        <i class="fas fa-paper-plane"></i> 
-						      </button>
-						    </div>
-						  </div>
-						</div>
-				    </div>
-				  </div>
-				</div>
-				<style>
-				.chat-modal-body {
-				  max-height: 300px;
-				  overflow-y: auto;
-				}
-
-				.message {
-				  margin-bottom: 15px;
-				}
-
-				.sender {
-				  font-weight: bold;
-				  color: #007bff; 
-				}
-
-				.text {
-				  margin-left: 10px;
-				}
-				</style>
-				<script>
-				document.addEventListener("DOMContentLoaded", function() {
-
-				  var chatInput = document.getElementById('chatInput');
-				  chatInput.addEventListener('keydown', function(event) {
-				    if (event.key === 'Enter') {
-				      sendMessage();
-				    }
-				  });
-				});
-
-				function sendMessage() {
-				  var chatInput = document.getElementById('chatInput');
-				  var chatModalBody = document.getElementById('chatModalBody');
-
-				  var messageText = chatInput.value.trim();
-				  if (messageText !== '') {
-				    var messageDiv = document.createElement('div');
-				    messageDiv.className = 'message';
-				    messageDiv.innerHTML = '<div class="sender">You:</div><div class="text">' + messageText + '</div>';
-				    chatModalBody.appendChild(messageDiv);
-
-				    chatInput.value = '';
-
-				    chatModalBody.scrollTop = chatModalBody.scrollHeight;
-				  }
-				}
-				</script>
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>United States</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>San Francisco</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_2"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_2" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Perhentian Islands</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_3"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_3" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
-
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Switzerland</span>
-						</span>
-
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Lake Thun</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_4"></i>
-								</div>
-							</div>
-						</div>						
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_4" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
 			</div><br>
 
-
 			<div class="row">
 
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Italy</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Rialto Mountains</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_5"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_5" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>United States</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>San Francisco</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_6"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_6" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid"></a>
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Malaysia</span>
-						</span>
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Perhentian Islands</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_7"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_7" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
-
-				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
-					<div class="media-1">
-						<a class="d-block mb-3"><img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid"></a>
-
-						<span class="d-flex align-items-center loc mb-2">
-							<span class="icon-room mr-3"></span>
-							<span>Switzerland</span>
-						</span>
-
-						<div class="d-flex align-items-center">
-							<div>
-								<h3>Lake Thun</h3>
-								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_8"></i>
-								</div>
-							</div>
-						</div>						
-					</div>
-				</div>
-				<div class="modal fade" id="commentModal_8" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <p>Ini adalah konten modal komentar.</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-
+      <?php foreach ($data as $album): ?>		
+			<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+			    <div class="media-1 position-relative">
+			        <div class="dropdown position-absolute top-0 end-0">
+			            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			                <i class="fa-solid fa-compact-disc"></i>
+			            </button>
+			            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			                <a class="dropdown-item" href="<?= base_url('/My_Gallery/delete_album/'.$album->id_album)?>">Delete</a>
+			            </div>
+			        </div>
+			        <a class="d-block mb-3" href="<?= base_url('My_Gallery/our_gallery/'.$album->id_album)?>">
+			            <img src="images/cover_album.jpg" alt="Image" class="img-fluid">
+			        </a>
+			        <div class="d-flex align-items-center">
+			            <div>
+			                <h3 class="text-capitalize"><?php echo $album->nama_album ?></h3>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+      <?php endforeach; ?>
 
 			</div><br>
 			<style>
