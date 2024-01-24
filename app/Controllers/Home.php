@@ -64,26 +64,23 @@ class Home extends BaseController
         if(session()->get('id')>0) {
 
         $model=new M_model();
-        $where2=array('gallery.id_gallery'=>$id); 
-        $on='like.id_gallery_like=gallery.id_gallery';
-        $data['data']=$model->our_gallery('like', 'gallery', $on, $where2);
+        $maker_like=session()->get('id');
+        $data=array(
 
-        $data = [
-            'id_gallery_like' => $where2,
-            'status_like' => 'like',
-            'maker_like' => session()->get('id'),
-            'tanggal_like' => date('Y-m-d H:i:s')
-        ];
+            'id_gallery_like'=>$id,
+            'status_like'=>'Like',
+            'maker_like'=>$maker_like
+        );
 
-        $model->simpan('like', $data);
+        $model->simpan('like',$data);
         return redirect()->to('/');
 
         }else{
             return redirect()->to('/');
         }
-    }
+    } 
 
-    public function comments()
+    public function comments($id)
     {
         if(session()->get('id')>0) {
 
@@ -92,6 +89,7 @@ class Home extends BaseController
         $maker_comment=session()->get('id');
         $data=array(
 
+            'id_gallery_comment'=>$id,
             'comment'=>$comment,
             'maker_comment'=>$maker_comment
         );

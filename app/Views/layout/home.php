@@ -176,53 +176,54 @@
 			</div>
 			<div class="row">
 
-				<?php foreach ($data as $gallery): ?>   
-				    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-				        <div class="media-1">
-				            <a class="d-block mb-3"><img class="img-gallery" src="<?= base_url('gallery/' . $gallery->gallery) ?>" alt="Image"></a>
-				            <span class="d-flex align-items-center loc mb-2">
-				                <span class="icon-room mr-3"></span>
-				                <span class="text-capitalize"><?php echo $gallery->kategori ?></span>
-				            </span>
-				            <div class="d-flex align-items-center">
-				                <div>
-				                    <h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
-				                    <div class="price ml-auto">
-				                        <a href="<?= base_url('My_Gallery/like/'.$gallery->id_gallery)?>"><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-				                        <i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1" ></i>
-				                    </div>
-				                </div>
-				            </div>
-				        </div>
-				    </div>
-				<?php endforeach; ?>
-				<form id="commentForm" action="<?= base_url('Home/comments')?>" method="post">
-			    <div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-			        <div class="modal-dialog modal-lg" role="document">
-			            <div class="modal-content">
-			                <div class="modal-header">
-			                    <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-			                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			                        <span aria-hidden="true">&times;</span>
-			                    </button>
-			                </div>
-			                <div class="modal-body chat-modal-body text-capitalize" id="chatModalBody">
-
-			                </div>
-			                <div class="modal-footer">
-			                    <div class="input-group">
-			                        <input type="text" name="comment" id="chatInput" class="form-control text-capitalize" placeholder="Write your message here....">
-			                        <div class="input-group-append">
-			                            <button type="button" class="btn btn-success" onclick="sendMessage()">
-			                                <i class="fas fa-paper-plane"></i> 
-			                            </button>
-			                        </div>
+				<?php foreach ($data as $gallery): ?>
+			    <div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+			        <div class="media-1">
+			            <a class="d-block mb-3"><img class="img-gallery" src="<?= base_url('gallery/' . $gallery->gallery) ?>" alt="Image"></a>
+			            <span class="d-flex align-items-center loc mb-2">
+			                <span class="icon-room mr-3"></span>
+			                <span class="text-capitalize"><?php echo $gallery->kategori ?></span>
+			            </span>
+			            <div class="d-flex align-items-center">
+			                <div>
+			                    <h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
+			                    <div class="price ml-auto">
+			                        <a href="<?= base_url('Home/like/'.$gallery->id_gallery)?>"><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
+			                        <i id="commentIcon_<?= $gallery->id_gallery ?>" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_<?= $gallery->id_gallery ?>" ></i>
 			                    </div>
 			                </div>
 			            </div>
 			        </div>
 			    </div>
-			</form>
+
+			    <form id="commentForm_<?= $gallery->id_gallery ?>" action="<?= base_url('Home/comments/'.$gallery->id_gallery)?>" method="post">
+			        <div class="modal fade" id="commentModal_<?= $gallery->id_gallery ?>" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+			            <div class="modal-dialog modal-lg" role="document">
+			                <div class="modal-content">
+			                    <div class="modal-header">
+			                        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
+			                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                            <span aria-hidden="true">&times;</span>
+			                        </button>
+			                    </div>
+			                    <div class="modal-body chat-modal-body text-capitalize" id="chatModalBody_<?= $gallery->id_gallery ?>">
+
+			                    </div>
+			                    <div class="modal-footer">
+			                        <div class="input-group">
+			                            <input type="text" name="comment" id="chatInput_<?= $gallery->id_gallery ?>" class="form-control text-capitalize" placeholder="Write your message here....">
+			                            <div class="input-group-append">
+			                                <button type="button" class="btn btn-success" onclick="sendMessage(<?= $gallery->id_gallery ?>)">
+			                                    <i class="fas fa-paper-plane"></i> 
+			                                </button>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </form>
+			<?php endforeach; ?>
 
 			<style>
 			    .img-gallery {

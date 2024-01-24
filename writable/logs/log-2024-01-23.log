@@ -373,3 +373,175 @@ CRITICAL - 2024-01-23 18:54:40 --> syntax error, unexpected ''comment'' (T_CONST
 #6 {main}
 ERROR - 2024-01-23 18:55:08 --> Column 'id_gallery_comment' cannot be null
 ERROR - 2024-01-23 18:55:25 --> Column 'id_gallery_comment' cannot be null
+ERROR - 2024-01-23 22:04:01 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:04:17 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:04:53 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:05:01 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:05:09 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:05:59 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:09:33 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:09:52 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:01 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:08 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:13 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:18 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:35 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:39 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:48 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:56 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:10:59 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:11:07 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:11:10 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:12:50 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:12:59 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:13:04 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:13:21 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:13:47 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:13:50 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:13:50 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:17:23 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:17:38 --> Unknown column 'user' in 'where clause'
+CRITICAL - 2024-01-23 22:20:03 --> Too few arguments to function App\Controllers\Home::dashboard(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-23 22:20:26 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:23:16 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:23:39 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:23:42 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:23:49 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:23:53 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:24:18 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:24:30 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:25:42 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:25:51 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:26:00 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:26:27 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:26:33 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:26:39 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:27:28 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:27:34 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:27:34 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:27:44 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:28:58 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:29:14 --> Unknown column 'user' in 'where clause'
+ERROR - 2024-01-23 22:29:14 --> Unknown column 'user' in 'where clause'
+CRITICAL - 2024-01-23 22:38:31 --> Cannot redeclare App\Controllers\Home::like()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-23 22:39:34 --> Cannot redeclare App\Controllers\Home::like()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-23 22:40:02 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:40:53 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:40:55 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:40:55 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:40:55 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:42:10 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:42:14 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard('5')
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:42:15 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:42:22 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 22:42:26 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(53): CodeIgniter\Model->__call('isLiked', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2024-01-23 22:43:31 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:43:36 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:43:36 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:43:56 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:43:56 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:45:32 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:47:07 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:47:07 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:47:10 --> Unknown column 'gambar' in 'where clause'
+ERROR - 2024-01-23 22:47:10 --> Unknown column 'gambar' in 'where clause'

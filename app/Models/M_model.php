@@ -766,4 +766,13 @@ class M_model extends model
 	{
 		return $this->db->table($table1)->join($table2, $on)->getWhere($where)->getResult();
 	}
+
+    public function getLike($id){
+        $query = $this->db->table('like')
+            ->select('*')
+            ->where("like.id_gallery_like =", $id)
+            ->where("like.maker_like =", session()->get('id'));
+        
+        return $query->get()->getResult();
+    }
 }
