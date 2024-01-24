@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2024 at 02:45 AM
+-- Generation Time: Jan 24, 2024 at 05:57 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -58,6 +58,17 @@ CREATE TABLE `comment` (
   `tanggal_comment` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id_comment`, `id_gallery_comment`, `comment`, `maker_comment`, `tanggal_comment`) VALUES
+(11, 4, 'p', 2, '2024-01-24'),
+(12, 4, 'p', 2, '2024-01-24'),
+(13, 4, 'l', 2, '2024-01-24'),
+(14, 5, 'p', 2, '2024-01-24'),
+(15, 6, 'l', 2, '2024-01-24');
+
 -- --------------------------------------------------------
 
 --
@@ -99,6 +110,18 @@ CREATE TABLE `like` (
   `maker_like` int(4) NOT NULL,
   `tanggal_like` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `like`
+--
+
+INSERT INTO `like` (`id_like`, `id_gallery_like`, `status_like`, `maker_like`, `tanggal_like`) VALUES
+(14, 5, 'Like', 2, '2024-01-24'),
+(15, 5, 'Like', 2, '2024-01-24'),
+(16, 6, 'Like', 2, '2024-01-24'),
+(17, 6, 'Like', 2, '2024-01-24'),
+(18, 6, 'Like', 2, '2024-01-24'),
+(19, 9, 'Like', 2, '2024-01-24');
 
 -- --------------------------------------------------------
 
@@ -197,7 +220,7 @@ ALTER TABLE `album`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id_comment` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_comment` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -209,7 +232,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `like`
 --
 ALTER TABLE `like`
-  MODIFY `id_like` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_like` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
