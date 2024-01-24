@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2024 at 03:47 PM
+-- Generation Time: Jan 24, 2024 at 02:45 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -40,9 +40,23 @@ CREATE TABLE `album` (
 
 INSERT INTO `album` (`id_album`, `nama_album`, `maker_album`, `tanggal_album`) VALUES
 (5, 'Pariwisata', 2, '2024-01-23'),
-(6, 'coba-1', 2, '2024-01-23'),
-(7, 'coba-2', 2, '2024-01-23'),
-(8, 'coba-3', 3, '2024-01-23');
+(8, 'coba-3', 3, '2024-01-23'),
+(23, 'sejarah', 2, '2024-01-23'),
+(24, 'keluarga', 2, '2024-01-23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id_comment` int(4) NOT NULL,
+  `id_gallery_comment` int(4) NOT NULL,
+  `comment` text NOT NULL,
+  `maker_comment` int(4) NOT NULL,
+  `tanggal_comment` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -75,6 +89,20 @@ INSERT INTO `gallery` (`id_gallery`, `id_album_gallery`, `kategori`, `nama_galle
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `like`
+--
+
+CREATE TABLE `like` (
+  `id_like` int(4) NOT NULL,
+  `id_gallery_like` int(4) NOT NULL,
+  `status_like` text NOT NULL,
+  `maker_like` int(4) NOT NULL,
+  `tanggal_like` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengguna`
 --
 
@@ -89,7 +117,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `id_user_pengguna`, `nama_pengguna`) VALUES
-(2, 2, 'norman ang');
+(2, 2, 'norman ang'),
+(3, 3, 'asep sumanto');
 
 -- --------------------------------------------------------
 
@@ -110,7 +139,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `foto`) VALUES
-(2, 'norman', '9ac915832a9a1c970c1564708917c3aa', 1, '');
+(2, 'norman', '9ac915832a9a1c970c1564708917c3aa', 1, ''),
+(3, 'asep', 'dc855efb0dc7476760afaa1b281665f1', 1, '');
 
 --
 -- Indexes for dumped tables
@@ -120,14 +150,25 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `foto`) VALUES
 -- Indexes for table `album`
 --
 ALTER TABLE `album`
-  ADD PRIMARY KEY (`id_album`),
-  ADD UNIQUE KEY `NAMA_ALBUM` (`nama_album`);
+  ADD PRIMARY KEY (`id_album`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id_comment`);
 
 --
 -- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id_gallery`);
+
+--
+-- Indexes for table `like`
+--
+ALTER TABLE `like`
+  ADD PRIMARY KEY (`id_like`);
 
 --
 -- Indexes for table `pengguna`
@@ -150,7 +191,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `album`
 --
 ALTER TABLE `album`
-  MODIFY `id_album` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_album` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id_comment` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -159,16 +206,22 @@ ALTER TABLE `gallery`
   MODIFY `id_gallery` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `like`
+--
+ALTER TABLE `like`
+  MODIFY `id_like` int(4) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengguna` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

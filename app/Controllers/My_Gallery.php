@@ -128,4 +128,26 @@ class My_Gallery extends BaseController
             return redirect()->to('/');
         }
     }
+
+    public function like($id)
+    {
+        if(session()->get('id')>0) {
+
+        $model=new M_model();
+        $where2=array('gallery.id_gallery'=>$id); 
+        $on='like.id_gallery_like=gallery.id_gallery';
+        $data['data']=$model->our_gallery('like', 'gallery', $on, $where2);
+
+        $id=session()->get('id');
+        $where=array('id_user'=>$id);
+
+        $where=array('id_user' => session()->get('id'));
+        $data['foto']=$model->getRow('user',$where);
+
+        echo view('layout/our_gallery', $data);
+
+        }else{
+            return redirect()->to('/');
+        }
+    }
 }

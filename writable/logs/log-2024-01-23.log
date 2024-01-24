@@ -281,3 +281,95 @@ CRITICAL - 2024-01-23 07:07:31 --> Call to a member function getResult() on bool
 #4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+ERROR - 2024-01-23 09:10:15 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-01-23 09:10:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\Gallery_UKK\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Gallery_UKK\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#2 C:\xampp\htdocs\Gallery_UKK\app\Models\M_model.php(400): CodeIgniter\Database\BaseBuilder->insert(Array)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(42): App\Models\M_model->simpan('album', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->album()
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2024-01-23 09:10:19 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-01-23 09:10:19 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\Gallery_UKK\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Gallery_UKK\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `al...', Array, false)
+#2 C:\xampp\htdocs\Gallery_UKK\app\Models\M_model.php(400): CodeIgniter\Database\BaseBuilder->insert(Array)
+#3 C:\xampp\htdocs\Gallery_UKK\app\Controllers\My_Gallery.php(42): App\Models\M_model->simpan('album', Array)
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->album()
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#6 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-23 18:11:42 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:12:12 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:13:14 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:13:46 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:15:04 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:15:52 --> Too few arguments to function App\Controllers\My_Gallery::like(), 0 passed in C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\My_Gallery->like()
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\My_Gallery))
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-23 18:50:48 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\Gallery_UKK\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\Gallery_UKK\system\Model.php(722): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\Gallery_UKK\app\Controllers\Home.php(102): CodeIgniter\Model->__call('getNewData', Array)
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(832): App\Controllers\Home->comments()
+#4 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-23 18:54:40 --> syntax error, unexpected ''comment'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xampp\htdocs\Gallery_UKK\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('home/dashboard')
+#1 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('home/dashboard')
+#2 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\Gallery_UKK\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Gallery_UKK\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Gallery_UKK\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-23 18:55:08 --> Column 'id_gallery_comment' cannot be null
+ERROR - 2024-01-23 18:55:25 --> Column 'id_gallery_comment' cannot be null

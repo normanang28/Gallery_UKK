@@ -58,4 +58,49 @@ class Home extends BaseController
             return redirect()->to('/');
         }
     }
+
+    public function like($id)
+    {
+        if(session()->get('id')>0) {
+
+        $model=new M_model();
+        $where2=array('gallery.id_gallery'=>$id); 
+        $on='like.id_gallery_like=gallery.id_gallery';
+        $data['data']=$model->our_gallery('like', 'gallery', $on, $where2);
+
+        $data = [
+            'id_gallery_like' => $where2,
+            'status_like' => 'like',
+            'maker_like' => session()->get('id'),
+            'tanggal_like' => date('Y-m-d H:i:s')
+        ];
+
+        $model->simpan('like', $data);
+        return redirect()->to('/');
+
+        }else{
+            return redirect()->to('/');
+        }
+    }
+
+    public function comments()
+    {
+        if(session()->get('id')>0) {
+
+        $model=new M_model();
+        $comment=$this->request->getPost('comment');
+        $maker_comment=session()->get('id');
+        $data=array(
+
+            'comment'=>$comment,
+            'maker_comment'=>$maker_comment
+        );
+
+        $model->simpan('comment',$data);
+        return redirect()->to('/');
+
+        }else{
+            return redirect()->to('/');
+        }
+    } 
 }

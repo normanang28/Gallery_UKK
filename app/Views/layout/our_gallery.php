@@ -115,7 +115,7 @@
 							<div>
 								<h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
 								<div class="price ml-auto">
-									<a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
+									<a href="<?= base_url('My_Gallery/like/'.$gallery->id_like)?>"><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
 									<i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1"></i>
 								</div>
 							</div>

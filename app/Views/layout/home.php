@@ -166,7 +166,7 @@
 		</div>
 	</div>
 
-	<div class="untree_co-section">
+	<div class="untree_co-section" id="All_Images">
 		<div class="container">
 			<div class="row justify-content-center text-center mb-5">
 				<div class="col-lg-6">
@@ -188,94 +188,107 @@
 				                <div>
 				                    <h3 class="text-capitalize"><?php echo $gallery->nama_gallery ?></h3>
 				                    <div class="price ml-auto">
-				                        <a href=""><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
-				                        <i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1"></i>
+				                        <a href="<?= base_url('My_Gallery/like/'.$gallery->id_gallery)?>"><i class="fa-regular fa-heart" style="margin-right: 10px;"></i></a>
+				                        <i id="commentIcon" class="fa-regular fa-comment" style="margin-right: 10px; cursor: pointer;" data-toggle="modal" data-target="#commentModal_1" ></i>
 				                    </div>
 				                </div>
 				            </div>
 				        </div>
 				    </div>
 				<?php endforeach; ?>
-				<div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-lg" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body chat-modal-body text-capitalize" id="chatModalBody">
+				<form id="commentForm" action="<?= base_url('Home/comments')?>" method="post">
+			    <div class="modal fade" id="commentModal_1" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+			        <div class="modal-dialog modal-lg" role="document">
+			            <div class="modal-content">
+			                <div class="modal-header">
+			                    <h5 class="modal-title" id="commentModalLabel">Comment Here</h5>
+			                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                        <span aria-hidden="true">&times;</span>
+			                    </button>
+			                </div>
+			                <div class="modal-body chat-modal-body text-capitalize" id="chatModalBody">
 
-				      </div>
-				      <div class="modal-footer">
-						  <div class="input-group">
-						    <input type="text" id="chatInput" class="form-control text-capitalize" placeholder="Type your message...">
-						    <div class="input-group-append">
-						      <button type="button" class="btn btn-success" onclick="sendMessage()">
-						        <i class="fas fa-paper-plane"></i> 
-						      </button>
-						    </div>
-						  </div>
-						</div>
-				    </div>
-				  </div>
-				</div>
-				<style>
-				.img-gallery {
-				    width: 100%; 
-				    height: 350px;
-				    object-fit: cover; 
-				    display: block;
-				}
+			                </div>
+			                <div class="modal-footer">
+			                    <div class="input-group">
+			                        <input type="text" name="comment" id="chatInput" class="form-control text-capitalize" placeholder="Write your message here....">
+			                        <div class="input-group-append">
+			                            <button type="button" class="btn btn-success" onclick="sendMessage()">
+			                                <i class="fas fa-paper-plane"></i> 
+			                            </button>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</form>
 
-				.chat-modal-body {
-				  max-height: 300px;
-				  overflow-y: auto;
-				}
+			<style>
+			    .img-gallery {
+			        width: 100%;
+			        height: 350px;
+			        object-fit: cover;
+			        display: block;
+			    }
 
-				.message {
-				  margin-bottom: 15px;
-				}
+			    .chat-modal-body {
+			        max-height: 300px;
+			        overflow-y: auto;
+			    }
 
-				.sender {
-				  font-weight: bold;
-				  color: #007bff; 
-				}
+			    .message {
+			        margin-bottom: 15px;
+			    }
 
-				.text {
-				  margin-left: 10px;
-				}
-				</style>
-				<script>
-				document.addEventListener("DOMContentLoaded", function() {
+			    .sender {
+			        font-weight: bold;
+			        color: #007bff;
+			    }
 
-				  var chatInput = document.getElementById('chatInput');
-				  chatInput.addEventListener('keydown', function(event) {
-				    if (event.key === 'Enter') {
-				      sendMessage();
-				    }
-				  });
-				});
+			    .text {
+			        margin-left: 10px;
+			    }
+			</style>
 
-				function sendMessage() {
-				  var chatInput = document.getElementById('chatInput');
-				  var chatModalBody = document.getElementById('chatModalBody');
+			<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+			<script>
+			    function sendMessage() {
+			        var commentText = $('#chatInput').val().trim();
 
-				  var messageText = chatInput.value.trim();
-				  if (messageText !== '') {
-				    var messageDiv = document.createElement('div');
-				    messageDiv.className = 'message';
-				    messageDiv.innerHTML = '<div class="sender">You:</div><div class="text">' + messageText + '</div>';
-				    chatModalBody.appendChild(messageDiv);
+			        if (commentText !== '') {
+			            var userId = 'YOUR_USER_ID'; // Ganti dengan logika sebenarnya untuk mendapatkan ID pengguna dari sesi
+			            var galleryId = 'YOUR_GALLERY_ID'; // Ganti dengan logika sebenarnya untuk mendapatkan ID galeri
 
-				    chatInput.value = '';
+			            var data = {
+			                id_gallery_comment: galleryId,
+			                comment: commentText,
+			                maker_comment: userId
+			            };
 
-				    chatModalBody.scrollTop = chatModalBody.scrollHeight;
-				  }
-				}
-				</script>
+			            $.ajax({
+			                type: 'POST',
+			                url: '<?= base_url('Home/comments')?>',
+			                data: data,
+			                success: function (response) {
+			                    // Handle the response from the server
+			                    console.log(response.message);
 
+			                    if (response.status === 'success') {
+			                        // Manipulasi tampilan halaman dengan menggunakan data baru
+			                        var newData = response.newData; // Gantilah ini dengan properti yang sebenarnya dari data baru
+
+			                        // Contoh manipulasi tampilan
+			                        $('#All_Images').html('Data baru: ' + newData);
+			                    }
+			                },
+			                error: function (error) {
+			                    console.error('Error menyimpan komentar:', error);
+			                }
+			            });
+			        }
+			    }
+			</script>
 			</div><br>
 
 			<style>
